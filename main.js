@@ -1,14 +1,14 @@
-let button = document.querySelector('.task-icon');
-let task = document.querySelector('.task-input');
-let list = document.querySelector('.task-list');
-let Id = document.querySelector('.id')
+let submitTaskSelector = document.querySelector('.task-icon');
+let taskInputSelector = document.querySelector('.task-input');
+let taskListSelector = document.querySelector('.task-list');
+let taskId = document.querySelector('.id')
 let taskList = getData() || [];
 showTasks();
 
-button.addEventListener('click', check);
+submitTaskSelector.addEventListener('click', check);
 
 function check() {
-    if (Id.value.length) {
+    if (taskId.value.length) {
         editTask()
     }
     else {
@@ -18,7 +18,7 @@ function check() {
 
 
 function addTask() {
-    let value = task.value;
+    let value = taskInputSelector.value;
     if (value) {
         taskList.push({ task: value, completed: false });
         clear();
@@ -31,8 +31,8 @@ function addTask() {
 }
 
 function editTask() {
-    let value = task.value;
-    let id = Id.value;
+    let value = taskInputSelector.value;
+    let id = taskId.value;
 
     taskList[id].task = value;
 
@@ -55,12 +55,12 @@ function toggle(index) {
 }
 
 function show(index) {
-    task.value = taskList[index].task;
-    Id.value = index;
+    taskInputSelector.value = taskList[index].task;
+    taskId.value = index;
 }
 function clear() {
-    task.value = "";
-    Id.value = "";
+    taskInputSelector.value = "";
+    taskId.value = "";
 }
 function showTasks() {
     let task = "";
@@ -77,7 +77,7 @@ function showTasks() {
         </li>
         `
     })
-    list.innerHTML = task
+    taskListSelector.innerHTML = task
 }
 
 
