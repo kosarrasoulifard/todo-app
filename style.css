@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style: none;
+}
+.container{
+    max-width: 40rem;
+    margin: 8rem auto;
+    font-family: 'Quicksand', sans-serif;
+}
+.task , .footer{
+    background: #ff7143;
+}
+.task{
+    padding: 0.7rem;
+    position: relative;
+}
+.task-input{
+    padding: 0.6rem 0.5rem;
+    border: none;
+    border-radius: 0.5rem 2.5rem 2.5rem 0.5rem;
+    width: 100%;
+
+}
+.task-icon{
+    position: absolute;
+    top: 0.78rem;
+    right: 0.8rem;
+    border: none;
+    background: #fff;
+    color: #23a79a;
+    border-radius: 50%;
+    
+}
+.task-icon:focus , .task-input:focus{
+    outline: none;
+}
+button:hover{
+    cursor: pointer;
+}
+.task-icon i {
+    font-size: 2rem;
+
+}
+.main{
+    min-height: 15rem;
+    padding: 0.2rem;
+}
+
+.footer{
+    color: #fff;
+    padding: 1rem 0.7rem;
+    font-weight: 600;
+    font-size: 0.8rem;
+}
+.task-list li {
+    border: 1px solid #23a79a;
+    width: 100%;
+    border-radius: 0.2rem 0.3rem 0.3rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0.7rem;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
+}
+.task-icons, .task-icons button {
+    background: #23a79a;
+}
+.task-icons{
+    border-radius: 0 0.2rem 0.2rem 0;
+
+}
+.task-icons i {
+    color: #fff;
+    font-size: 1rem;
+}
+.task-icons button{
+    border: none;
+    padding: 0.7rem;
+
+}
+ 
+
